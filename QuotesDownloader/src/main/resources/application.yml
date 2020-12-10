@@ -1,0 +1,26 @@
+app:
+  iex:
+    api-token: Tpk_4de5f1528fa046ea9449a4e5e5df5224
+    api-base-url: https://sandbox.iexapis.com/stable
+spring:
+  cloud:
+    stream:
+      function:
+        definition: acceptStock;updateStockQuote
+      binders:
+        kafka-localhost:
+          type: kafka
+          environment:
+            spring:
+              kafka:
+                host: localhost
+                port: 9092
+      bindings:
+        acceptStock-in-0:
+          destination: Stocks
+        updateStockQuote-out-0:
+          destination: Quotes
+
+
+
+

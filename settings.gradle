@@ -1,0 +1,5 @@
+rootProject.name = 'SpringKafka'
+include 'QuotesDownloader'
+include 'TradingBot'
+include 'DbService'
+
